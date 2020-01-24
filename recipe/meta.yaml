@@ -37,7 +37,6 @@ test:
   imports:
     - Glacier2
     - Ice
-    - Ice.Py3
     - IceBox
     - IceGrid
     - IceMX
