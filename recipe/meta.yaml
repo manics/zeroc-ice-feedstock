@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: True  # [win or osx]
   entry_points:
     - slice2py=slice2py:main
 
