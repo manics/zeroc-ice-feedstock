@@ -48,7 +48,7 @@ test:
 
 about:
   home: https://zeroc.com
-  license: GNU General Public v2 (GPLv2)
+  license: GPL-2.0-only
   license_family: GPL2
   license_file:
     - ICE_LICENSE
