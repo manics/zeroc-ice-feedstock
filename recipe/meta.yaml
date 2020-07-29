@@ -31,6 +31,8 @@ requirements:
     - bzip2
     - openssl
     - libiconv
+  run_constrained:
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx]
 
 test:
   imports:
