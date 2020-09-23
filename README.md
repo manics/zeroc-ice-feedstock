@@ -3,7 +3,7 @@ About zeroc-ice
 
 Home: https://zeroc.com
 
-Package license: GNU General Public v2 (GPLv2)
+Package license: GPL-2.0-only
 
 Feedstock license: BSD-3-Clause
 
