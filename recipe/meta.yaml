@@ -9,7 +9,9 @@ source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   sha256: 4235ffeb605bcd4e22e716577f7d61e4aa1bc82f65276bb542701a81b7933356
   patches:
-    - patch  # [linux]
+    # Adds iconv to Linux
+    # Changes OS X to use openssl instead of Secure Transport
+    - patch  # [not win]
 
 build:
   number: 1

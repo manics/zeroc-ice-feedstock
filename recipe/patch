@@ -1,6 +1,15 @@
---- a/setup.py
-+++ b/setup.py
-@@ -107,7 +107,7 @@ else:
+--- setup.py.orig	2019-07-31 20:49:38.000000000 +0100
++++ setup.py	2020-09-24 21:53:14.000000000 +0100
+@@ -54,7 +54,7 @@
+         libraries = ["IceSSL", "Ice", "Slice", "IceUtil"]
+         extra_link_args = []
+     else:
+-        libraries=['iconv']
++        libraries=['iconv', 'ssl', 'crypto', 'bz2']
+         extra_link_args = ['-framework','Security', '-framework','CoreFoundation']
+ 
+     def filterName(path):
+@@ -107,7 +107,7 @@
      if use_ice:
          libraries = ["IceSSL", "Ice", "Slice", "IceUtil"]
      else:
