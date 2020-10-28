@@ -9,11 +9,10 @@ source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   sha256: 4235ffeb605bcd4e22e716577f7d61e4aa1bc82f65276bb542701a81b7933356
   patches:
-    - patch
+    - patch  # [linux]
 
 build:
-  number: 0
-  skip: True  # [win or osx]
+  number: 1
   entry_points:
     - slice2py=slice2py:main
 
@@ -32,6 +31,8 @@ requirements:
     - bzip2
     - openssl
     - libiconv
+  run_constrained:
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx]
 
 test:
   imports:
@@ -47,7 +48,7 @@ test:
 
 about:
   home: "https://zeroc.com"
-  license: "GNU General Public v2 (GPLv2)"
+  license: GPL-2.0-only
   license_family: GPL2
   license_file: 
     - ICE_LICENSE
@@ -56,3 +57,4 @@ about:
 extra:
   recipe-maintainers:
     - dpryan79
+    - manics
