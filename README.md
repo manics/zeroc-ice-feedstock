@@ -192,5 +192,6 @@ Feedstock Maintainers
 =====================
 
 * [@dpryan79](https://github.com/dpryan79/)
+* [@joshmoore](https://github.com/joshmoore/)
 * [@manics](https://github.com/manics/)
 
