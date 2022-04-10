@@ -10,6 +10,7 @@ source:
   sha256: 4235ffeb605bcd4e22e716577f7d61e4aa1bc82f65276bb542701a81b7933356
   patches:
     - patch  # [linux]
+    - osx.patch  # [osx]
 
 build:
   number: 3
