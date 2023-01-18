@@ -1,5 +1,5 @@
 {% set name = "zeroc-ice" %}
-{% set version = "3.7.8" %}
+{% set version = "3.7.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9287511c890c5dd15404635546d4b28db56a1904713da1ea829e9d7454f96486
+  sha256: 6438a2c8d4fcef55cc0c734f3a12879b83738171dc2747cdfe23b8b04cfca511
   patches:
     - patch
 
