@@ -1,18 +1,18 @@
 {% set name = "zeroc-ice" %}
-{% set version = "3.7.8.2" %}
+{% set version = "3.7.10.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6438a2c8d4fcef55cc0c734f3a12879b83738171dc2747cdfe23b8b04cfca511
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: b063aafda360df711f76945529bb541576f266be41e5d5a2dd77f5d320c18664
   patches:
     - patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   entry_points:
     - slice2py=slice2py:main
@@ -22,6 +22,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - pip
